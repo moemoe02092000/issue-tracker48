@@ -1,7 +1,12 @@
+'use client'
 import React from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { GiAlienBug } from "react-icons/gi";
+import classNames from "classnames";
 const NavBar = () => {
+  const currentPath = usePathname();
+  console.log(currentPath);
   const links = [
     { label: "Dashboard", href: "/" },
     { label: "Issues", href: "/issues" },
@@ -17,7 +22,8 @@ const NavBar = () => {
         {links.map((link) => (
           <li
             key={link.href}
-            className="text-zinc-500 hover:text-zinc-900 transition-colors"
+            //className={`${link.href===currentPath ? "text-zinc-900": "text-zinc-500"} hover:text-zinc-900 transition-colors`}
+            className={classNames({'text-zinc-900':link.href===currentPath,'text-zinc-500':link.href!==currentPath,'hover:text-zinc-900 transition-colors':true})}
           >
             <Link href={link.href}>{link.label}</Link>
           </li>
