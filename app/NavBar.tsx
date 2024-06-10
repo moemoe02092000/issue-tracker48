@@ -36,4 +36,4 @@ const NavBar = () => {
 };
 
 export default NavBar;
-//20MIN
+//30MIN
