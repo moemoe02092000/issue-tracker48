@@ -19,6 +19,8 @@ export async function POST(request:NextRequest){
 
 import prisma from "@/prisma/client";
 import { NextRequest, NextResponse } from "next/server";
+//import { creatIssueSchema } from "@/app/createIssueSchema";
+
 //import { title } from "process";
 
 import { z } from "zod";
