@@ -1,4 +1,4 @@
-"use client";
+/*"use client";
 import { Callout, Spinner, Text, TextArea, TextField } from "@radix-ui/themes";
 import SimpleMDE from "react-simplemde-editor";
 import { useForm, Controller } from "react-hook-form";
@@ -19,7 +19,7 @@ type IssueForm = z.infer<typeof creatIssueSchema>;
   description: string;
 }*/
 
-const NewIssuePage = () => {
+/*const NewIssuePage = () => {
   const router = useRouter();
   const { register, control, handleSubmit,formState:{errors} } = useForm<IssueForm>({
     resolver:zodResolver(creatIssueSchema)
@@ -27,7 +27,8 @@ const NewIssuePage = () => {
   const[error,setError]=useState('');
   //console.log(register('title'))
   const[isSubmitting,setSubmitting]=useState(false);
-  return (
+  /*const onSubmit = */
+  /*return (
 
     <div className="max-w-xl" >
       {error && <Callout.Root color="red" className="mb-5">
@@ -50,24 +51,25 @@ const NewIssuePage = () => {
         )}
       >
         {" "}
-        {/*enlarging the placeholder*/}
-        <TextField.Root placeholder="Title" {...register("title")} />
-        {/*errors.title && /*<Text color="red"as="p">*/}<ErrorMessage>{errors.title?.message}</ErrorMessage>{/*</Text>*/}
-        {/*<TextArea placeholder='Description'/>*/}
-        <Controller
+        {/*enlarging the placeholder*//*}
+        /*<TextField.Root placeholder="Title" {...register("title")} />
+        {/*errors.title && /*<Text color="red"as="p">*//*}<ErrorMessage>{errors.title?.message}</ErrorMessage>{/*</Text>*//*}
+        {/*<TextArea placeholder='Description'/>*//*}
+        /*<Controller
           name="description"
           control={control}
           render={({ field }) => (
             <SimpleMDE placeholder="Description" {...field} />
           )}
         />
-        {/*errors.description &&*/ /*<Text color="red" as="p">*/}<ErrorMessage>{errors.description?.message}</ErrorMessage>{/*</Text>*/}
-        {/*<SimpleMDE placeholder='Description'/>*/}
-        <Button disabled={isSubmitting}>Submit New Issue {isSubmitting &&<Spinner/>}</Button>
+        {/*errors.description &&*/ /*<Text color="red" as="p">*//*}<ErrorMessage>{errors.description?.message}</ErrorMessage>{/*</Text>*//*}
+        /*{/*<SimpleMDE placeholder='Description'/>*//*}
+        /*<Button disabled={isSubmitting}>Submit New Issue {isSubmitting &&<Spinner/>}</Button>
       </form>
     </div>
   );
 };
 
-export default NewIssuePage;
+export default NewIssuePage;*/
 //1.07hour
+
